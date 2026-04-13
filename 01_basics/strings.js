@@ -1,3 +1,4 @@
+
 const name = "hitesh"
 const repoCount = 50
 
@@ -15,6 +16,27 @@ const gameName = new String('hitesh-hc-com')
 // console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(4));
 // console.log(gameName[1]);
+// console.log(gameName);
+// console.log(gameName.includes("hc"));
+// let text = "Hello world";
+// console.log(text.includes("e","w"));
+
+// console.log(text.indexOf("ld"));
+
+let teext = "Java,Script";
+console.log(teext.split(","));
+
+
+// console.log(text.slice(4,-3));
+
+let text = "apple,banana,mango";
+
+console.log(text.split(","));
+
+// let a = "Hello";
+// let b = "World";
+
+// console.log(a.concat("",b));
 
 
 // const newString = gameName.substring(0, 4)
@@ -27,10 +49,10 @@ const gameName = new String('hitesh-hc-com')
 // console.log(newStringOne);
 // console.log(newStringOne.trim());
 
-const url = "https://hitesh.com/hitesh%20choudhary"
+// const url = "https://hitesh.com/hitesh%20choudhary"
 
-console.log(url.replace('%20', '-'))
+// console.log(url.replace('%20', '-'))
 
-console.log(url.includes('sundar'))
+// console.log(url.includes('sundar'))
 
-console.log(gameName.split('-'));
+// console.log(gameName.split('-'));
