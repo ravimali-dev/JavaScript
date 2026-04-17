@@ -13,9 +13,13 @@
 
 <script>
 document.getElementById("list").addEventListener("click", (e) => {
-    console.log("Listener is on UL");
-  console.log("Clicked element:", e.target);
+    console.log("List")
 });
+document.querySelectorAll("li").forEach((li) => {
+  li.addEventListener("click", () => {
+    console.log("list item");
+  })
+})
 </script>
 
 </body>
