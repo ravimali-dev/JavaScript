@@ -20,16 +20,16 @@
 //   });
 
 
-fetch( 'https://api.github.com/users/hiteshchoudhary')
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-    console.log(data.followers)
-})
-.catch(function(error){
-    console.log(error)
-})
+// fetch( 'https://api.github.com/users/hiteshchoudhary')
+// .then(function(response){
+//     return response.json();
+// })
+// .then(function(data){
+//     console.log(data.followers)
+// })
+// .catch(function(error){
+//     console.log(error)
+// })
 
 // const promiseThree = new Promise(function(resolve, reject){
 //     setTimeout(function(){
@@ -40,3 +40,24 @@ fetch( 'https://api.github.com/users/hiteshchoudhary')
 // promiseThree.then(function(user){
 //     console.log(user.username);
 // })
+
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = false;
+        if (!error) {
+            resolve({username: "Ravi", password: "123"})
+        } else {
+            reject('ERROR: Something went wrong')
+        }
+    }, 1000)
+})
+
+ promiseFour
+ .then((user) => {
+    console.log(user);
+    return user.username
+}).then((username) => {
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+}).finally(() => console.log("The promise is either resolved or rejected"))
