@@ -20,13 +20,23 @@
 //   });
 
 
-fetch("https://jsonplaceholder.typicode.com/users/1")
+fetch( 'https://api.github.com/users/hiteshchoudhary')
 .then(function(response){
     return response.json();
 })
 .then(function(data){
-    console.log(data)
+    console.log(data.followers)
 })
 .catch(function(error){
     console.log(error)
 })
+
+// const promiseThree = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         resolve({username: "Chai", email: "chai@example.com"})
+//     }, 1000)
+// })
+
+// promiseThree.then(function(user){
+//     console.log(user.username);
+// })
