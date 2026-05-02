@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Weather</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+  <h2>🌤 Weather App</h2>
+
+  <input id="city" placeholder="Enter city">
+  <button onclick="getWeather()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    async function getWeather() {
+      let city = document.getElementById("city").value;
+
+      let res = await fetch(
+        `https://api.weatherapi.com/v1/current.json?key=9ab2ccd3937241a7953171210260205&q=${city}`
+      );
+
+      let data = await res.json();
+
+      document.getElementById("result").innerHTML =
+        data.location.name + " 🌡 " + data.current.temp_c + "°C";
+    }
+  </script>
+
+</body>
+</html>
