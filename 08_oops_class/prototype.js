@@ -1,20 +1,4 @@
-// let arr = ["Thor", "Iron Man", "SpiderMan"]
 
-// const hero = {
-//     name: "Thor",
-//     power: "Thander"
-// }
-
-// Object.prototype.ravi = function(){
-//     console.log("Ravi is heare")
-// }
-// console.log(hero.ravi())
-let str= "ravi   "
-String.prototype.trueLength = function(){
-    console.log(`${this.trim().length}`)
-}
-
-str.trueLength()
 
 
 // let myName = "hitesh     "
@@ -66,21 +50,31 @@ const TeachingSupport = {
 const TASupport = {
     makeAssignment: 'JS assignment',
     fullTime: true,
-    __proto__: TeachingSupport
+    // __proto__: TeachingSupport,
+    __proto__: User
 }
 
-Teacher.__proto__ = User
+// Teacher.__proto__ = User
 
-// modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
 
-let anotherUsername = "ChaiAurCode     "
+// console.log(Teacher.name)
 
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);
+// // modern syntax
+console.log(Object.setPrototypeOf(TeachingSupport, Teacher))
+
+// let anotherUsername = "ChaiAurCode     "
+
+// String.prototype.trueLength = function(){
+//     console.log(`${this}`);
+//     console.log(`True length is: ${this.trim().length}`);
+// }
+
+// anotherUsername.trueLength()
+// "hitesh".trueLength()
+// "iceTea".trueLength()
+
+const user = {
+  name: "Ravi"
 }
 
-anotherUsername.trueLength()
-"hitesh".trueLength()
-"iceTea".trueLength()
+console.log(user.toString())
